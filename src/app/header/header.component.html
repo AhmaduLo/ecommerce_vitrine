@@ -1,0 +1,100 @@
+
+  <header class="header_destop">
+    <div class="container_header">
+      <div class="logo" routerLink="/">
+        LOGO
+      </div>
+      <div class="menu">
+        <ul>
+          <li>
+            <div routerLink="/shoes">Shoes</div>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <div  routerLink="/clothing">Clothing</div>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <div  routerLink="/sport">SporthingsWear</div>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <div routerLink="/bag">Bag</div>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <div routerLink="/pull">Pullover</div>
+            <div class="underline"></div>
+          </li>
+          <li>
+            <div>Sandal</div>
+            <div class="underline"></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="btn_login">
+        <button>Login</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ------------------------------------------------------------ -->
+  <div class="menu_out" [class.menu_out_none]="menu_Cache">
+      <div class="cont_menu_out">
+        <ul (click)="remove_ul()">
+            <li>
+              <div routerLink="/shoes">Shoes</div>
+              <div class="underline"></div>
+            </li>
+            <li>
+              <div  routerLink="/clothing">Clothing</div>
+              <div class="underline"></div>
+            </li>
+            <li>
+              <div  routerLink="/sport">SporthingsWear</div>
+              <div class="underline"></div>
+            </li>
+            <li>
+              <div  routerLink="/bag">Bag</div>
+              <div class="underline"></div>
+            </li>
+            <li>
+              <div routerLink="/pull">Pullover</div>
+              <div class="underline"></div>
+            </li>
+            <li>
+              <div>Sandal</div>
+              <div class="underline"></div>
+            </li>
+          </ul>
+      </div>
+    
+</div>
+  <header class="header_mobile">
+    <div class="container_header_mobile">
+      <div
+        class="menu_burger"
+        [class.anim_burger]="check"
+        [class.menu_burger_click]="check_menuBurger"
+        (click)="burger_click()"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <div class="logo" (clcik)="remove_menu_burger()" routerLink="/">
+        Logo
+      </div>
+
+      <div class="btn_login">
+        <button>login</button>
+      </div>
+    </div>
+    
+  </header>
+  
+<router-outlet></router-outlet>
+
+

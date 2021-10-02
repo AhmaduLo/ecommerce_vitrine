@@ -1,0 +1,39 @@
+<section>
+ 
+  <div class="container_section_shoes">
+
+    <div class="photo_shoes" *ngFor="let image of images, let i=index">
+      <div class="img_shoes">
+        <img [src]="image.url" alt="">
+      </div>
+      <div class="description_images">
+       <h3>{{image.description}}</h3> 
+      </div>
+      <div class="btn_buy">
+        <h2>price: {{image.prix}}</h2>
+        <button (click)="buy_article(i)">Detail</button>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<div class="info_article" [class.open_info_article]="see_info_article">
+  <div class="remove_info_shoes" (click)="delet_info()">
+    <i class="fa fa-times" aria-hidden="true"></i>
+  </div>
+  <div class="img_border">
+  <div class="photo_article">
+    <img [src]="info_Clothing?.url" alt="">
+  </div>
+</div>
+<div class="description_images">
+       <h3>{{info_Clothing?.description}}</h3> 
+      </div>
+      <div class="btn_buy">
+        <h2>price: {{info_Clothing?.prix}}</h2>
+        <button>Buy</button>
+      </div>
+
+</div>
