@@ -11,6 +11,7 @@ import { InfoArticleComponent } from './info-article/info-article.component';
 import { SporthingsWearComponent } from './sporthings-wear/sporthings-wear.component';
 import { BagComponent } from './bag/bag.component';
 import { PullComponent } from './pull/pull.component';
+import { ShoesWomanComponent } from './shoes-woman/shoes-woman.component';
 
 
 
@@ -24,7 +25,8 @@ import { PullComponent } from './pull/pull.component';
     InfoArticleComponent,
     SporthingsWearComponent,
     BagComponent,
-    PullComponent
+    PullComponent,
+    ShoesWomanComponent
   ],
   imports: [
     BrowserModule,

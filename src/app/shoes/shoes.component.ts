@@ -8,8 +8,13 @@ import { Component, OnInit } from "@angular/core";
 })
 export class ShoesComponent implements OnInit {
   images: any[] = [];
+  images_woman:any[]=[];
   info_shoes:any;
   see_info_article:boolean = false;
+  clcik:boolean = false;
+  view_woman_page:boolean=false;
+  cache_man_page:boolean=false;
+ 
   constructor() {}
 
   ngOnInit(): void {
@@ -191,15 +196,136 @@ export class ShoesComponent implements OnInit {
       description: "jordan 43 size",
     };
 
+    //---------------woman images----------------------------------------
+
+    this.images_woman[0] = {
+      url:
+        "https://i.pinimg.com/236x/72/0d/2d/720d2d2a8b43a36af952f76ddc5bca29.jpg",
+      prix: "145$",
+      description: "Image about black in fashion by aigerim234 on We Heart It",
+    };
+
+    this.images_woman[1] = {
+      url:
+        "https://i.pinimg.com/236x/e1/5b/1b/e15b1b472b4f7c3b7c722eb960c26f47.jpg",
+      prix: "200$",
+      description: "damn dis shit fireee",
+    };
+
+    this.images_woman[2] = {
+      url:
+        "https://i.pinimg.com/236x/11/46/a0/1146a06fb4fcbfa721647c9b40b3f20a.jpg",
+      prix: "205$",
+      description: "My ex is father ✨",
+    };
+
+    this.images_woman[3] = {
+      url:
+        "https://i.pinimg.com/236x/40/a3/be/40a3be3f4aa8d8c92e516cd31fce838c.jpg",
+      prix: "180$",
+      description: "Air Jordan 1 Mid Barely Orange 🍑",
+    };
+
+    this.images_woman[4] = {
+      url:
+        "https://i.pinimg.com/236x/47/d8/c6/47d8c64368bf126f49496652a1792605.jpg",
+      prix: "195$",
+      description: "Nike Air Max 270 White Black - AH8050-100",
+    };
+
+    this.images_woman[5] = {
+      url:
+        "https://i.pinimg.com/236x/4d/84/3e/4d843e28feb62aecff1c4b2190630129.jpg",
+      prix: "230$",
+      description: "Nike airss",
+    };
+
+    this.images_woman[6] = {
+      url:
+        "https://i.pinimg.com/236x/18/50/21/185021c6d17c60f50a129fd99db24938.jpg",
+      prix: "230$",
+      description: "Meu script para the vampire diaries",
+    };
+
+    this.images_woman[7] = {
+      url:
+        "https://i.pinimg.com/236x/72/8d/46/728d4688a7e1bbeef0fba580aa479324.jpg",
+      prix: "300$",
+      description: "It's new ! 💛",
+    };
+
+    this.images_woman[8] = {
+      url:
+        "https://i.pinimg.com/236x/49/dc/44/49dc44fb2ad5634931e8c566900dfdfd.jpg",
+      prix: "185$",
+      description: "POR CAUSA DAQUELA PORR@ DE VIAGEM [1]",
+    };
+
+    this.images_woman[9] = {
+      url:
+        "https://i.pinimg.com/564x/9b/2a/35/9b2a35bec9294663b2af6b2e340ee236.jpg",
+      prix: "120$",
+      description: "Baskets mode femme",
+    };
+
+    this.images_woman[10] = {
+      url:
+        "https://i.pinimg.com/236x/2d/a2/f0/2da2f0372db9eedb5d34083222cc533b.jpg",
+      prix: "140$",
+      description: "Image about fashion in Sneakers and Heels 💛 by Fille des îles",
+    };
+
+    this.images_woman[11] = {
+      url:
+        "https://i.pinimg.com/236x/c3/91/8d/c3918dc3270e0329ed4d921d05462f9f.jpg",
+      prix: "230$",
+      description: "Sneaker à lacets color block à imprimé lettre - Blanc / 37",
+    };
+
+    this.images_woman[12] = {
+      url:
+        "https://i.pinimg.com/236x/ad/cb/20/adcb20ca61e809dbb314eab61ab55301.jpg",
+      prix: "200$",
+      description: "Cet article n'est pas disponible | Etsy",
+    };
+
+    this.images_woman[13] = {
+      url:
+        "https://i.pinimg.com/236x/e0/bc/e6/e0bce653fd8c6ef6849601798ede34b7.jpg",
+      prix: "190$",
+      description: "Tan Shadow Custom Nike Air Force 1's (AF1s)",
+    };
+
+    this.images_woman[14] = {
+      url:
+        "https://i.pinimg.com/236x/8e/4c/04/8e4c04fc61bb848456c63a95213e5d2c.jpg",
+      prix: "230$",
+      description: "Air Force 1 Shadow Outline Red",
+    };
+
+    this.images_woman[15] = {
+      url:
+        "https://i.pinimg.com/236x/4b/a8/ec/4ba8ec0e2968b0020ba78d4a5d82f63e.jpg",
+      prix: "100$",
+      description: "Image in SHOES collection by 𝚉𝙾𝙴 on We Heart It",
+    };
+
   }
   buy_article(i:any){
    this.info_shoes=this.images[i]
+   this.info_shoes = this.images_woman[i];
    this.see_info_article=true;
    //console.log( this.info_shoes);
    
   }
   delet_info(){
     this.see_info_article=false;
+  }
+
+  move_left(){
+    this. clcik =! this.clcik;
+    this. view_woman_page =! this. view_woman_page;
+    this.cache_man_page =! this.cache_man_page;
   }
   
  

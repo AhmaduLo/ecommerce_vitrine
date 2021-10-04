@@ -1,39 +1,70 @@
-<section>
- 
-  <div class="container_section_shoes">
+<div class="btn_change">
+  <div class="border_btn" (click)="move_left()">
+    <div class="circle_btn" [class.move_left]="clcik">
+      <span *ngIf="this. clcik == false">
+        <i class="fa fa-male" aria-hidden="true"></i>
+      </span>
 
+      <span *ngIf="this. clcik == true">
+        <i class="fa fa-female" aria-hidden="true"></i>
+      </span>
+    </div>
+  </div>
+</div>
+
+<section class="men_page" [class.displaye_none_page]="cache_man_page">
+  <div class="container_section_shoes">
     <div class="photo_shoes" *ngFor="let image of images, let i=index">
       <div class="img_shoes">
-        <img [src]="image.url" alt="">
+        <img [src]="image.url" alt="" />
       </div>
       <div class="description_images">
-       <h3>{{image.description}}</h3> 
+        <h3>{{image.description}}</h3>
       </div>
       <div class="btn_buy">
         <h2>price: {{image.prix}}</h2>
         <button (click)="buy_article(i)">Detail</button>
       </div>
-
     </div>
-
   </div>
 </section>
+
+
+<!-- -----------------------------------page woman----------------------------------------------- -->
+
+<section class="women_page" [class.display_block_page]="view_woman_page">
+  <div class="container_section_shoes">
+    <div class="photo_shoes" *ngFor="let image_woman of images_woman, let i=index">
+      <div class="img_shoes">
+        <img [src]="image_woman.url" alt="" />
+      </div>
+      <div class="description_images">
+        <h3>{{image_woman.description}}</h3>
+      </div>
+      <div class="btn_buy">
+        <h2>price: {{image_woman.prix}}</h2>
+        <button (click)="buy_article(i)">Detail</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- -------------------info article-------------------- -->
 
 <div class="info_article" [class.open_info_article]="see_info_article">
   <div class="remove_info_shoes" (click)="delet_info()">
     <i class="fa fa-times" aria-hidden="true"></i>
   </div>
   <div class="img_border">
-  <div class="photo_article">
-    <img [src]="info_shoes?.url" alt="">
+    <div class="photo_article">
+      <img [src]="info_shoes?.url" alt="" />
+    </div>
   </div>
-</div>
-<div class="description_images">
-       <h3>{{info_shoes?.description}}</h3> 
-      </div>
-      <div class="btn_buy">
-        <h2>price: {{info_shoes?.prix}}</h2>
-        <button>Buy</button>
-      </div>
-
+  <div class="description_images">
+    <h3>{{info_shoes?.description}}</h3>
+  </div>
+  <div class="btn_buy">
+    <h2>price: {{info_shoes?.prix}}</h2>
+    <button>Buy</button>
+  </div>
 </div>
