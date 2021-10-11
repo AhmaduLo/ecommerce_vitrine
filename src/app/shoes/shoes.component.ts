@@ -313,10 +313,13 @@ export class ShoesComponent implements OnInit {
   }
   buy_article(i:any){
    this.info_shoes=this.images[i]
-   this.info_shoes = this.images_woman[i];
    this.see_info_article=true;
    //console.log( this.info_shoes);
    
+  }
+  buy_article_woman(i:any){
+    this.info_shoes = this.images_woman[i];
+    this.see_info_article=true;
   }
   delet_info(){
     this.see_info_article=false;

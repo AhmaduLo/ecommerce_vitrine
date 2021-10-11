@@ -1,4 +1,4 @@
-import { ShoesWomanComponent } from './shoes-woman/shoes-woman.component';
+
 import { PullComponent } from './pull/pull.component';
 import { BagComponent } from './bag/bag.component';
 import { SporthingsWearComponent } from './sporthings-wear/sporthings-wear.component';
@@ -33,9 +33,7 @@ const routes: Routes = [
       {
         path:"pull", component:PullComponent
       },
-      {
-        path:"woman_shoes", component:ShoesWomanComponent
-      }
+     
     ],
   },
 ];
